@@ -1,12 +1,12 @@
 .PHONY: pack run
 
-all: pack build run
+all: pack build 
 
 pack:
 	packfolder ui resources.cpp -v "resources"
 
 build:
-	g++ main.cpp sciter-gtk-main.cpp -o treadwall_gui \
+	g++ main.cpp sciter-gtk-main.cpp -o treadwall_basic_gui \
   -I/usr/include/sciter \
   -L/usr/lib/sciter \
   -lsciter \
@@ -35,5 +35,5 @@ build:
 
 
 run: 
-	./treadwall_gui
+	sudo ./treadwall_basic_gui
 
