@@ -1,0 +1,53 @@
+<html>
+  <head>
+    <title>Treadwall Basic GUI</title>
+    <script type="text/tiscript">
+      event click $(#set-button){ 
+        //view.msgbox(#alert, "info", "call native c++...");
+        view.set_button( $(#speed).value, $(#incline).value ); 
+      }
+    </script>
+  </head>
+  <body>
+    <p>&nbsp;</p> <!-- fix controls from floating off top of screen -->
+
+
+    <!-- speed -->
+    <div>
+      <span style="text-align:center">
+        <input!number id="speed"
+                      min=0 
+                      max=50 
+                      value=18 
+                      step=1 
+                      style="width: 14em; zoom:200%"/>
+        <div style="zoom: 200%; text-align: center"> Speed </div>
+      </span>
+    </div>
+    
+
+    <!-- incline -->
+    <div>
+      <span style="text-align:center">
+        <input!number id="incline"
+                      min=-87 
+                      max=15 
+                      value=-5 
+                      step=1 
+                      style="width: 14em; zoom:200%"/>
+        <div style="zoom: 200%; text-align: center"> Incline </div>
+      </span>
+    </div>
+    <br/>
+
+
+    <!-- Set Button --> 
+    <div>
+      <span style="text-align:center">
+        <button id="set-button" style="width: 20em; zoom:200%" >Set</button>
+      </span>
+    </div>
+
+
+  </body>
+</html>

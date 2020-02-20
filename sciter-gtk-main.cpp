@@ -1,0 +1,1 @@
+/usr/include/sciter/sciter-gtk-main.cpp
